@@ -87,11 +87,8 @@ bool callback_key_down(igl::opengl::glfw::Viewer& viewer, unsigned char key, int
 		viewer.data().clear();
 		viewer.data().set_mesh(V, F);
 		colors_per_face.setZero(F.rows(),3);
-		//add your code for computing per-face connected components here
-		//store the component labels in cid
-		//compute colors for the faces based on components
-		//store the colors in component_colors_per_face
-		//set the viewer colors
+        igl::facet_components(F, cid);
+        igl::jet(cid, true, colors_per_face);
 		viewer.data().set_colors(colors_per_face);
 	}
 
@@ -398,7 +395,7 @@ int main(int argc, char *argv[]) {
     else
     {
       // Read mesh
-      igl::readOFF("../data/cube.off",V,F);
+      igl::readOFF("../data/honda.off",V,F);
     }
 
     viewer.data().set_mesh(V,F);
