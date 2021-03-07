@@ -89,6 +89,23 @@ bool callback_key_down(igl::opengl::glfw::Viewer& viewer, unsigned char key, int
 		colors_per_face.setZero(F.rows(),3);
         igl::facet_components(F, cid);
         igl::jet(cid, true, colors_per_face);
+
+        // cid contains now every face and the component number it's part of
+        // maxCoeff gets the highest number in a VectorXi, cid in this case
+        // The componenets starts from 0, so we add 1
+        int num_of_comps = cid.maxCoeff() + 1;
+        cout << endl << "Number of componenets: " << num_of_comps << endl;
+        cout << "Component        Number of faces" << endl;
+        
+        for (int i = 0; i < num_of_comps; i++) {
+            int faces = 0;
+            for (auto CIDit = cid.begin(); CIDit != cid.end(); CIDit++)
+            {
+                if (i == *CIDit)
+                    faces++;
+            }
+            cout << i << "                " << faces << endl;
+        }
 		viewer.data().set_colors(colors_per_face);
 	}
 
@@ -395,7 +412,7 @@ int main(int argc, char *argv[]) {
     else
     {
       // Read mesh
-      igl::readOFF("../data/honda.off",V,F);
+      igl::readOFF("../data/cube.off",V,F);
     }
 
     viewer.data().set_mesh(V,F);
