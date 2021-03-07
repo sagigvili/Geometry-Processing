@@ -5,15 +5,15 @@
 ### Tasks
 1. Text dump of the two data structures for the provided mesh “cube.off”
 
-   ![../images/image-20210307092414195.png?raw=true]()
+   ![](https://github.com/HaifaGraphicsCourses/geometryprocessing2021-sagigvili/blob/master/assignment1/images/image-20210307092414195.png?raw=true)
 
    Vertex-to-Face relations:
 
-   ![../images/image-20210307092508671.png?raw=true]()
+   ![](https://github.com/HaifaGraphicsCourses/geometryprocessing2021-sagigvili/blob/master/assignment1/images/image-20210307092508671.png?raw=true)
 
    Vertex-to-Vertex relations:
 
-   ![../images/image-20210307092606595.png?raw=true]()
+   ![](https://github.com/HaifaGraphicsCourses/geometryprocessing2021-sagigvili/blob/master/assignment1/images/image-20210307092606595.png?raw=true)
 
 2) Show screenshots of the provided meshes with each connected component colored differently. Show the number of connected components and the size of each component (measured in number
 of faces) for all the provided models.
