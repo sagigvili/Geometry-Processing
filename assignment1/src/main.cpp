@@ -42,16 +42,64 @@ void update_display(igl::opengl::glfw::Viewer& viewer);
 
 bool callback_key_down(igl::opengl::glfw::Viewer& viewer, unsigned char key, int modifiers)
 {
-	if (key == '1')
-	{
-		//add your code for computing vertex to face relations here
-		//store in VF,VFi
-	}
+    if (key == '1')
+    {
+        cout << endl;
+        igl::vertex_triangle_adjacency(V, F, VF, VFi);
+        cout << "Vertex        Adjacented Faces";
+        cout << endl;
+        for (auto VFit = VF.begin(); VFit != VF.end(); VFit++)
+        {
+            cout << "-------------------------------" << endl;
+            cout << "  " << VFit - VF.begin() << "            ";
+            std::vector<int> adjs = *VFit;
+            for (auto AJit = adjs.begin(); AJit != adjs.end(); AJit++)
+            {
+                cout << *AJit << " ";
+            }
+            cout << endl;
+        }
+        cout << endl;
+    }
 
 	if (key == '2')
 	{
-		//add your code for computing vertex to vertex relations here
-		//store in VV
+        cout << endl;
+        igl::adjacency_list(F, VV);
+        cout << "Vertex        Adjacented Vertices";
+        cout << endl;
+        for (auto VVit = VV.begin(); VVit != VV.end(); VVit++)
+        {
+            cout << "-------------------------------" << endl;
+            cout << "  " << VVit - VV.begin() << "            ";
+            std::vector<int> adjs = *VVit;
+            for (auto AJit = adjs.begin(); AJit != adjs.end(); AJit++)
+            {
+                cout << *AJit << " ";
+            }
+            cout << endl;
+        }
+        cout << endl;
+
+        cout << endl;
+        igl::adjacency_list(F, VV);
+        for (int i = 0; i < VV.size(); i++)
+        {
+            cout << "The vertex neighbors of vertex number " << i << ": ";
+            std::vector<int> adjacents = VV[i];
+            for (int j = 0; j < adjacents.size(); j++)
+            {
+                if (j == adjacents.size() - 1)
+                {
+                    cout << adjacents[j];
+                }
+                else
+                {
+                    cout << adjacents[j] << ", ";
+                }
+            }
+            cout << endl;
+        }
 	}
 
 	if (key == '3')
