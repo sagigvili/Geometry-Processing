@@ -5,8 +5,6 @@ Edit this 'README.md' file to report all your results. There is no need to write
 ## Required results
 
 ### Tasks
-1) Add a text dump of the content of the two data structures for the provided mesh “cube.off”.
-
 1. Text dump of the two data structures for the provided mesh “cube.off”
 
    <img src="C:\Users\cowbo\AppData\Roaming\Typora\typora-user-images\image-20210307092414195.png" alt="image-20210307092414195" style="zoom: 67%;" />
