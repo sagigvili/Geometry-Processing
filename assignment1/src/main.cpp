@@ -80,26 +80,6 @@ bool callback_key_down(igl::opengl::glfw::Viewer& viewer, unsigned char key, int
             cout << endl;
         }
         cout << endl;
-
-        cout << endl;
-        igl::adjacency_list(F, VV);
-        for (int i = 0; i < VV.size(); i++)
-        {
-            cout << "The vertex neighbors of vertex number " << i << ": ";
-            std::vector<int> adjacents = VV[i];
-            for (int j = 0; j < adjacents.size(); j++)
-            {
-                if (j == adjacents.size() - 1)
-                {
-                    cout << adjacents[j];
-                }
-                else
-                {
-                    cout << adjacents[j] << ", ";
-                }
-            }
-            cout << endl;
-        }
 	}
 
 	if (key == '3')
