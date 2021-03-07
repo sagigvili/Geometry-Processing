@@ -15,8 +15,35 @@
 
    ![](https://github.com/HaifaGraphicsCourses/geometryprocessing2021-sagigvili/blob/master/assignment1/images/image-20210307092606595.png?raw=true)
 
-2) Show screenshots of the provided meshes with each connected component colored differently. Show the number of connected components and the size of each component (measured in number
-of faces) for all the provided models.
+2) Show screenshots of the provided meshes with each connected component colored differently. Show the number of connected components and the size of each component (measured in number of faces) for all the provided models:
+
+​	Cube:
+
+​	![](https://github.com/HaifaGraphicsCourses/geometryprocessing2021-sagigvili/blob/master/assignment1/images/cube_2.PNG?raw=true)
+
+
+
+![](https://github.com/HaifaGraphicsCourses/geometryprocessing2021-sagigvili/blob/master/assignment1/images/cube_comp_2.PNG?raw=true)
+
+
+
+CoffeeCup:
+
+![](https://github.com/HaifaGraphicsCourses/geometryprocessing2021-sagigvili/blob/master/assignment1/images/coffeecup_2.PNG?raw=true)
+
+
+
+![](https://github.com/HaifaGraphicsCourses/geometryprocessing2021-sagigvili/blob/master/assignment1/images/coffeecup_comp_2.PNG?raw=true)
+
+
+
+Honda:
+
+![](https://github.com/HaifaGraphicsCourses/geometryprocessing2021-sagigvili/blob/master/assignment1/images/honda_2.PNG?raw=true)
+
+
+
+![](https://github.com/HaifaGraphicsCourses/geometryprocessing2021-sagigvili/blob/master/assignment1/images/honda_comp_2.PNG?raw=true)
 
 3) Show screenshots of the subdivided meshes.
 
