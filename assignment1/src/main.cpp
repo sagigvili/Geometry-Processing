@@ -111,11 +111,47 @@ bool callback_key_down(igl::opengl::glfw::Viewer& viewer, unsigned char key, int
 
 	if (key == '4')
 	{
-		Eigen::MatrixXd Vout=V;
-		Eigen::MatrixXi Fout=F;
-		// Add your code for sqrt(3) subdivision here.
-		// Set up the viewer to display the new mesh
-		V = Vout; F = Fout;
+        double a, n;
+        int count = 0;
+		Eigen::MatrixXd Vout=V , P, baryCent;
+		Eigen::MatrixXi Fout=F, M;
+        Fout.setZero(F.rows() * 3, F.cols());
+        P.setZero(V.rows(), V.cols());
+
+        igl::triangle_triangle_adjacency(F, M);
+        igl::barycenter(V, F, baryCent);
+        igl::adjacency_list(F, VV);
+
+        for (int i = 0; i < V.rows(); i++)
+        {
+            n = VV[i].size();
+            float piX2 = 3.14159265 * 2;
+            a = (4 - 2 * cos(piX2 / n)) / 9;
+            for (int j = 0; j < VV[i].size(); j++)
+            {
+                P.row(i) += V.row(VV[i][j]);
+            }
+            P.row(i) = ((1 - a) * V.row(i)) + (a * (P.row(i) / n));
+        }
+        Vout.setZero(P.rows() + baryCent.rows(), P.cols());
+        Vout << P, baryCent;
+
+        for (int i = 0; i < F.rows(); i++)
+        {
+            for (int j = 0; j < 3; j++) {
+                if (M(i, j) == -1)
+                    Fout.row(count++) << F(i, j), F(i, (j + 1) % 3), V.rows() + i;
+                else if (i > M(i, j))
+                {
+                    Fout.row(count) << F(i, j), V.rows() + M(i, j), V.rows() + i;
+                    Fout.row(++count) << V.rows() + M(i, j), F(i, (j + 1) % 3), V.rows() + i;
+                    count++;
+                }
+            }
+        }
+
+		V = Vout; 
+        F = Fout;
 		update_display(viewer);
 	}
     
@@ -412,7 +448,7 @@ int main(int argc, char *argv[]) {
     else
     {
       // Read mesh
-      igl::readOFF("../data/honda.off",V,F);
+      igl::readOFF("../data/cube.off",V,F);
     }
 
     viewer.data().set_mesh(V,F);
