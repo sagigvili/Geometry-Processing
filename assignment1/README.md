@@ -45,7 +45,19 @@ Honda:
 
 ![](https://github.com/HaifaGraphicsCourses/geometryprocessing2021-sagigvili/blob/master/assignment1/images/honda_comp_2.PNG?raw=true)
 
-3) Show screenshots of the subdivided meshes.
+3) Show screenshots of the subdivided meshes:
+
+​	 Subdivided Cube (4 times):
+
+​		![](https://github.com/HaifaGraphicsCourses/geometryprocessing2021-sagigvili/blob/master/assignment1/images/subdividedCube.PNG?raw=true)
+
+ 	 Subdivided Coffeecup (3 times):
+
+​		![](https://github.com/HaifaGraphicsCourses/geometryprocessing2021-sagigvili/blob/master/assignment1/images/subdividedCup.PNG?raw=true)
+
+ 	 Subdivided Honda (3 times):
+
+​		![](https://github.com/HaifaGraphicsCourses/geometryprocessing2021-sagigvili/blob/master/assignment1/images/subdividedHonda.PNG?raw=true)
 
 4) Show screenshots of face extrusion.
 
