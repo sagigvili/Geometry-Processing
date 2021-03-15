@@ -59,6 +59,30 @@ Honda:
 
 ​		![](https://github.com/HaifaGraphicsCourses/geometryprocessing2021-sagigvili/blob/master/assignment1/images/subdividedHonda.PNG?raw=true)
 
-4) Show screenshots of face extrusion.
+4)  Screenshots of face extrusion:
 
-5) Show a screenshot of a mesh you designed yourself starting from 'cube.off' and using the GUI supplied editing operations, as well as sqrt3 subdivision and face extrusion. Make sure to also save the mesh under the name 'design.off', commit and push it. 
+​		Cube extrusion of 1 face, before:
+
+​		![](https://github.com/HaifaGraphicsCourses/geometryprocessing2021-sagigvili/blob/master/assignment1/images/cube_before_extrude.PNG?raw=true)
+
+​		Cube extrusion of 1 face, after 3 extrusions:
+
+​		![](https://github.com/HaifaGraphicsCourses/geometryprocessing2021-sagigvili/blob/master/assignment1/images/cube_before_extrude.PNG?raw=true)
+
+​		Cube extrusion of 3 faces, before:
+
+​		![](https://github.com/HaifaGraphicsCourses/geometryprocessing2021-sagigvili/blob/master/assignment1/images/cube_before_3_extrude.PNG?raw=true)
+
+​		Cube extrusion of 3 faces, after 2 extrusions:
+
+​		![](https://github.com/HaifaGraphicsCourses/geometryprocessing2021-sagigvili/blob/master/assignment1/images/cube_after_3_extrude.PNG?raw=true)
+
+5) A Mesh designed using Extrude and Subdivision operations (OFF file is provided on data folder in assignment 1): 
+
+​		Magnemite (Mesh):
+
+​		![](https://github.com/HaifaGraphicsCourses/geometryprocessing2021-sagigvili/blob/master/assignment1/images/design.PNG?raw=true)
+
+​		Magnemite (Original):
+
+​		![](https://github.com/HaifaGraphicsCourses/geometryprocessing2021-sagigvili/blob/master/assignment1/images/magnemite.jpg?raw=true)

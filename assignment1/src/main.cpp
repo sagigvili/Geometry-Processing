@@ -203,29 +203,51 @@ void extrude(igl::opengl::glfw::Viewer& viewer) {
     Fout.resize(F.rows()+2*bnd_loop.size(),3); // 2 new faces per new edge (= per new vertex)
     for (int i = 0; i < F.rows(); i++) Fout.row(i)=F.row(i); // set first 'F.rows()' faces as the old faces
 
-    // Add your code for updating Fout here
 
     // 5.1) Get the set of faces containing the old boundary vertices (hint: call igl::vertex_triangle_adjacency on the old 'F')
+    igl::vertex_triangle_adjacency(V.rows(), F, VF, VFi);
     
     // 5.2) Get the "outer" set of faces containing the boundary vertices 
     //      (hint: call std::set_difference to compute the difference between the previously computed set of faces, and the selected faces)
+    std::set<int> boundery_verices, outer_faces;
+    for (auto BNDit = bnd_loop.begin(); BNDit != bnd_loop.end(); BNDit++)
+    {
+        int vf_size = VF[*BNDit].size();
+        for (int j = 0; j < vf_size; j++) {
+            boundery_verices.insert(VF[*BNDit][j]);
+        }
+    }
+    std::set_difference(boundery_verices.begin(), boundery_verices.end(), selected_faces.begin(), selected_faces.end(), inserter(outer_faces, outer_faces.end()));
 
     // 5.3) Edit old outer faces indices, replacing the old vertices with the indices of the duplicated boundary vertices
+    for (auto OUTERit = outer_faces.begin(); OUTERit != outer_faces.end(); OUTERit++)
+        for (int i = 0; i < bnd_loop.size(); i++)
+            for (int j = 0; j < 3; j++)
+                if (Fout.row(*OUTERit)[j] == bnd_loop[i])
+                    Fout.row(*OUTERit)[j] = V.rows() + i;
 
     // 5.4) Add new faces, 2 per edge
     int f_idx = F.rows();
     for (int i = 0; i < bnd_loop.size(); i++) {
-        int v1,v2,v3,v4;
-        // set v1,v2,v3,v4 correctly
+        int v1,v2,v3,v4, j = (i + 1) % bnd_loop.size();
+        v1 = V.rows() + i;
+        v2 = V.rows() + j;
+        v3 = bnd_loop[j];
+        v4 = bnd_loop[i];
         Fout.row(f_idx++) << v1,v2,v3;
         Fout.row(f_idx++) << v3,v4,v1;
     }
 
     // 6) Check that the new mesh is a manifold (call is_edge_manifold, is_vertex_manifold on Vout,Fout)
-    
+    Eigen::VectorXi t1, t2;
+    igl::is_vertex_manifold(Fout, t1);
+    t2.setOnes(t1.rows(), t1.cols());
+    if (!igl::is_edge_manifold(Fout) || t1 != t2) 
+        return;
+
     // 7) Update V,F
-    //V = Vout; // uncomment for your code to take effect
-    //F = Fout; // uncomment for your code to take effect
+    V = Vout;
+    F = Fout;
 
     // Update gui and move to edit-translate mode
     colors_per_face = Eigen::MatrixXd::Ones(F.rows(),3); // number of faces has changed
@@ -448,7 +470,7 @@ int main(int argc, char *argv[]) {
     else
     {
       // Read mesh
-      igl::readOFF("../data/honda.off",V,F);
+      igl::readOFF("../data/cube.off",V,F);
     }
 
     viewer.data().set_mesh(V,F);
