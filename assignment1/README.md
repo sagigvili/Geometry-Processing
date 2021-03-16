@@ -67,7 +67,7 @@ Honda:
 
 ​		Cube extrusion of 1 face, after 3 extrusions:
 
-​		![](https://github.com/HaifaGraphicsCourses/geometryprocessing2021-sagigvili/blob/master/assignment1/images/cube_before_extrude.PNG?raw=true)
+​		![](https://github.com/HaifaGraphicsCourses/geometryprocessing2021-sagigvili/blob/master/assignment1/images/cube_after_extrude.PNG?raw=true)
 
 ​		Cube extrusion of 3 faces, before:
 
