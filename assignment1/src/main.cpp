@@ -470,7 +470,7 @@ int main(int argc, char *argv[]) {
     else
     {
       // Read mesh
-      igl::readOFF("../data/cube.off",V,F);
+      igl::readOFF("../data/coffeecup.off",V,F);
     }
 
     viewer.data().set_mesh(V,F);
