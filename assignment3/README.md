@@ -10,7 +10,7 @@ Edit this 'README.md' file to report all your results. There is no need to write
 
   <u>Uniform Laplacian parameterization</u>
 
-  ​	![](https://github.com/HaifaGraphicsCourses/geometryprocessing2021-sagigvili/blob/master/assignment3/results/uv_cathead_uniform.png?raw=true)
+  ​	![](https://github.com/HaifaGraphicsCourses/geometryprocessing2021-sagigvili/blob/master/assignment3/results/uv_cathead_uniform.PNG?raw=true)
 
   <u>Cotan Laplacian parameterization</u>
 
