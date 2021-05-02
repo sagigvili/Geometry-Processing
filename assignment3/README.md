@@ -14,7 +14,7 @@ Edit this 'README.md' file to report all your results. There is no need to write
 
   <u>Cotan Laplacian parameterization</u>
 
-  ​     ![](https://github.com/HaifaGraphicsCourses/geometryprocessing2021-sagigvili/blob/master/assignment3/results/uv_cathead_cotangent.PNG?raw=true)
+  ​     ![](https://github.com/HaifaGraphicsCourses/geometryprocessing2021-sagigvili/blob/master/assignment3/results/uv_cathead_cotan.PNG?raw=true)
 
   <u>LCSM parameterization</u>
 
@@ -50,7 +50,7 @@ Edit this 'README.md' file to report all your results. There is no need to write
 
   <u>Cotan Laplacian parameterization</u>
 
-  ​     ![](https://github.com/HaifaGraphicsCourses/geometryprocessing2021-sagigvili/blob/master/assignment3/results/uv_hemisphere_cotangent.PNG?raw=true)
+  ​     ![](https://github.com/HaifaGraphicsCourses/geometryprocessing2021-sagigvili/blob/master/assignment3/results/uv_hemisphere_cotan.PNG?raw=true)
 
   <u>LCSM parameterization</u>
 
@@ -98,7 +98,7 @@ Edit this 'README.md' file to report all your results. There is no need to write
   
   <u>Textured Checkerboard Conformal Distortion Hemisphere </u>
   
-  ![](https://github.com/HaifaGraphicsCourses/geometryprocessing2021-sagigvili/blob/master/assignment3/results/textured_hemisphere_distortion_angle.PNG?raw=true)
+  ![](https://github.com/HaifaGraphicsCourses/geometryprocessing2021-sagigvili/blob/master/assignment3/results/textured_hemisphere_distortion_angel.PNG?raw=true)
   
   <u>Conformal Distortion Hemisphere parameterzation</u>
   
