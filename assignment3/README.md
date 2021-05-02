@@ -14,23 +14,23 @@ Edit this 'README.md' file to report all your results. There is no need to write
 
   <u>Cotan Laplacian parameterization</u>
 
-  ​     ![](https://github.com/HaifaGraphicsCourses/geometryprocessing2021-sagigvili/blob/master/assignment3/results/uv_cathead_cotangent.png?raw=true)
+  ​     ![](https://github.com/HaifaGraphicsCourses/geometryprocessing2021-sagigvili/blob/master/assignment3/results/uv_cathead_cotangent.PNG?raw=true)
 
   <u>LCSM parameterization</u>
 
-  ​     ![](https://github.com/HaifaGraphicsCourses/geometryprocessing2021-sagigvili/blob/master/assignment3/results/uv_cathead_LSCM.png?raw=true)
+  ​     ![](https://github.com/HaifaGraphicsCourses/geometryprocessing2021-sagigvili/blob/master/assignment3/results/uv_cathead_LSCM.PNG?raw=true)
 
   <u>Textured Checkerboard Uniform Laplacian</u>
 
-  ![](https://github.com/HaifaGraphicsCourses/geometryprocessing2021-sagigvili/blob/master/assignment3/results/textured_cathead_uniform.png?raw=true)
+  ![](https://github.com/HaifaGraphicsCourses/geometryprocessing2021-sagigvili/blob/master/assignment3/results/textured_cathead_uniform.PNG?raw=true)
 
   <u>Textured Checkerboard Cotan Laplacian</u>
 
-  ![](https://github.com/HaifaGraphicsCourses/geometryprocessing2021-sagigvili/blob/master/assignment3/results/textured_cathead_cotan.png?raw=true)
+  ![](https://github.com/HaifaGraphicsCourses/geometryprocessing2021-sagigvili/blob/master/assignment3/results/textured_cathead_cotan.PNG?raw=true)
 
   <u>Textured Checkerboard LSCM</u>
 
-  ![](https://github.com/HaifaGraphicsCourses/geometryprocessing2021-sagigvili/blob/master/assignment3/results/textured_cathead_LSCM.png?raw=true)
+  ![](https://github.com/HaifaGraphicsCourses/geometryprocessing2021-sagigvili/blob/master/assignment3/results/textured_cathead_LSCM.PNG?raw=true)
 
   In the "Cathead" model we can see a fold over on the ears of the cat (similar to the rabbit ears we saw on lecture) when we choose uniform laplacian parameterization or a Cotangent one - but LCSM resolves the issue pretty well (but not completely).
 
@@ -42,75 +42,75 @@ Edit this 'README.md' file to report all your results. There is no need to write
 
   <u>Textured Checkerboard Cotan Laplacian</u>
 
-  ![](https://github.com/HaifaGraphicsCourses/geometryprocessing2021-sagigvili/blob/master/assignment3/results/textured_hemisphere_cotan.png?raw=true)
+  ![](https://github.com/HaifaGraphicsCourses/geometryprocessing2021-sagigvili/blob/master/assignment3/results/textured_hemisphere_cotan.PNG?raw=true)
 
   <u>Textured Checkerboard LSCM</u>
 
-  ![](https://github.com/HaifaGraphicsCourses/geometryprocessing2021-sagigvili/blob/master/assignment3/results/textured_hemisphere_LSCM.png?raw=true)
+  ![](https://github.com/HaifaGraphicsCourses/geometryprocessing2021-sagigvili/blob/master/assignment3/results/textured_hemisphere_LSCM.PNG?raw=true)
 
   <u>Cotan Laplacian parameterization</u>
 
-  ​     ![](https://github.com/HaifaGraphicsCourses/geometryprocessing2021-sagigvili/blob/master/assignment3/results/uv_hemisphere_cotangent.png?raw=true)
+  ​     ![](https://github.com/HaifaGraphicsCourses/geometryprocessing2021-sagigvili/blob/master/assignment3/results/uv_hemisphere_cotangent.PNG?raw=true)
 
   <u>LCSM parameterization</u>
 
-  ​     ![](https://github.com/HaifaGraphicsCourses/geometryprocessing2021-sagigvili/blob/master/assignment3/results/uv_hemisphere_LSCM.png?raw=true)
+  ​     ![](https://github.com/HaifaGraphicsCourses/geometryprocessing2021-sagigvili/blob/master/assignment3/results/uv_hemisphere_LSCM.PNG?raw=true)
 
   <u>Scaled Up Texture LSCM</u>
 
-  ![](https://github.com/HaifaGraphicsCourses/geometryprocessing2021-sagigvili/blob/master/assignment3/results/textured_hemisphere_LSCM_scaled.png?raw=true)
+  ![](https://github.com/HaifaGraphicsCourses/geometryprocessing2021-sagigvili/blob/master/assignment3/results/textured_hemisphere_LSCM_scaled.PNG?raw=true)
 
   <u>Down Scaled Texture LSCM</u>
 
-  ![](https://github.com/HaifaGraphicsCourses/geometryprocessing2021-sagigvili/blob/master/assignment3/results/textured_hemisphere_LSCM_scaled2.png?raw=true)
+  ![](https://github.com/HaifaGraphicsCourses/geometryprocessing2021-sagigvili/blob/master/assignment3/results/textured_hemisphere_LSCM_scaled2.PNG?raw=true)
 
   **<u>Hemisphere_non_convex_boundary:</u>**
 
   <u>Textured Checkerboard LSCM</u>
 
-  ![](https://github.com/HaifaGraphicsCourses/geometryprocessing2021-sagigvili/blob/master/assignment3/results/textured_hemisphere_non_convex_boundary_LCSM.png?raw=true)
+  ![](https://github.com/HaifaGraphicsCourses/geometryprocessing2021-sagigvili/blob/master/assignment3/results/textured_hemisphere_non_convex_boundary_LCSM.PNG?raw=true)
 
   <u>LCSM parameterization</u>
 
-  ​     ![](https://github.com/HaifaGraphicsCourses/geometryprocessing2021-sagigvili/blob/master/assignment3/results/uv_hemisphere_non_convex_boundary_LCSM.png?raw=true)
+  ​     ![](https://github.com/HaifaGraphicsCourses/geometryprocessing2021-sagigvili/blob/master/assignment3/results/uv_hemisphere_non_convex_boundary_LCSM.PNG?raw=true)
 
   <u>Textured LSCM parameterization</u>
 
-  ![](https://github.com/HaifaGraphicsCourses/geometryprocessing2021-sagigvili/blob/master/assignment3/results/textured_uv_hemisphere_non_convex_boundary.png?raw=true)
+  ![](https://github.com/HaifaGraphicsCourses/geometryprocessing2021-sagigvili/blob/master/assignment3/results/textured_uv_hemisphere_non_convex_boundary.PNG?raw=true)
 
 * Several examples of the distortion visualizations:
 
   <u>Textured Checkerboard Conformal Distortion Cathead</u>
   
-  ![](https://github.com/HaifaGraphicsCourses/geometryprocessing2021-sagigvili/blob/master/assignment3/results/textured_cathead_distortion_angle.png?raw=true)
+  ![](https://github.com/HaifaGraphicsCourses/geometryprocessing2021-sagigvili/blob/master/assignment3/results/textured_cathead_distortion_angle.PNG?raw=true)
   
   <u>Conformal Distortion Cathead parameterzation</u>
   
-  ![](https://github.com/HaifaGraphicsCourses/geometryprocessing2021-sagigvili/blob/master/assignment3/results/uv_cathead_distortion_angle.png?raw=true)
+  ![](https://github.com/HaifaGraphicsCourses/geometryprocessing2021-sagigvili/blob/master/assignment3/results/uv_cathead_distortion_angle.PNG?raw=true)
   
   <u>Textured Checkerboard Isometric Distortion Cathead</u>
   
-  ![](https://github.com/HaifaGraphicsCourses/geometryprocessing2021-sagigvili/blob/master/assignment3/results/textured_cathead_distortion_edge.png?raw=true)
+  ![](https://github.com/HaifaGraphicsCourses/geometryprocessing2021-sagigvili/blob/master/assignment3/results/textured_cathead_distortion_edge.PNG?raw=true)
   
   <u>Isometric Distortion Cathead parameterzation</u>
   
-  ![](https://github.com/HaifaGraphicsCourses/geometryprocessing2021-sagigvili/blob/master/assignment3/results/uv_cathead_distortion_edge.png?raw=true)
+  ![](https://github.com/HaifaGraphicsCourses/geometryprocessing2021-sagigvili/blob/master/assignment3/results/uv_cathead_distortion_edge.PNG?raw=true)
   
   <u>Textured Checkerboard Conformal Distortion Hemisphere </u>
   
-  ![](https://github.com/HaifaGraphicsCourses/geometryprocessing2021-sagigvili/blob/master/assignment3/results/textured_hemisphere_distortion_angle.png?raw=true)
+  ![](https://github.com/HaifaGraphicsCourses/geometryprocessing2021-sagigvili/blob/master/assignment3/results/textured_hemisphere_distortion_angle.PNG?raw=true)
   
   <u>Conformal Distortion Hemisphere parameterzation</u>
   
-  ![](https://github.com/HaifaGraphicsCourses/geometryprocessing2021-sagigvili/blob/master/assignment3/results/uv_hemisphere_distortion_angle.png?raw=true)
+  ![](https://github.com/HaifaGraphicsCourses/geometryprocessing2021-sagigvili/blob/master/assignment3/results/uv_hemisphere_distortion_angle.PNG?raw=true)
   
   <u>Textured Checkerboard Isometric Distortion Hemisphere </u>
   
-  ![](https://github.com/HaifaGraphicsCourses/geometryprocessing2021-sagigvili/blob/master/assignment3/results/textured_hemisphere_distortion_edge.png?raw=true)
+  ![](https://github.com/HaifaGraphicsCourses/geometryprocessing2021-sagigvili/blob/master/assignment3/results/textured_hemisphere_distortion_edge.PNG?raw=true)
   
   <u>Isometric Distortion Hemisphere parameterzation</u>
   
-  ![](https://github.com/HaifaGraphicsCourses/geometryprocessing2021-sagigvili/blob/master/assignment3/results/uv_hemisphere_distortion_edge.png?raw=true)
+  ![](https://github.com/HaifaGraphicsCourses/geometryprocessing2021-sagigvili/blob/master/assignment3/results/uv_hemisphere_distortion_edge.PNG?raw=true)
   
   We can see on Cathead that the distortion of faces is calculated fine, both Conformal and Isometric.
   
