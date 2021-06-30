@@ -32,8 +32,9 @@ public:
 		int i=0;
 		for(; i < maxIterations; i++) {
 			computeSearchDirection(function, xi, dx);
-
-			if (dx.norm() < solveResidual){
+			double perf = dx.norm();
+			if (perf < solveResidual)
+			{
 				optimizationConverged = true;
 				break;
 			}
@@ -56,6 +57,9 @@ protected:
 
 		// Ex. 1.1
 
+		dx.setZero();
+		function->addGradientTo(dx, x);
+		dx *= -1;
 	}
 
 	virtual void doLineSearch(ObjectiveFunction *function, const VectorXd& dx, VectorXd& xi)
@@ -63,6 +67,27 @@ protected:
 
 		// Ex. 1.1
 
+		double alpha = 1;
+		double beta = 0.5;
+		bool is_inferior = false;
+		VectorXd tmp_x;
+		tmp_x.resize(xi.rows(), 1);
+		double ref_val = function->computeValue(xi);
+		double cur_alpha = alpha;
+
+		tmp_x = xi + dx * cur_alpha;
+		double tmp_val = function->computeValue(tmp_x);
+
+		for (int i = 0; i < maxLineSearchIterations || !std::isfinite(tmp_val); i++)
+		{
+			if (tmp_val < ref_val && std::isfinite(tmp_val))
+				break;
+			cur_alpha *= beta;
+			tmp_x = xi + dx * cur_alpha;
+			tmp_val = function->computeValue(tmp_x);
+		}
+
+		xi = tmp_x;
 	}
 
 protected:

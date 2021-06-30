@@ -24,6 +24,24 @@ protected:
 
 		// Ex 1.3
 
+		Eigen::SimplicialLDLT<Eigen::SparseMatrix<double>> solver;
+		Eigen::SparseMatrix<double> hessianSparse(x.rows(), x.rows()), rs(x.rows(), 1), solved(x.rows(), 1);
+		VectorXd grad;
+		grad.resize(x.rows(), 1);
+		grad.setZero();
+
+		hessianEntries.clear();
+		function->addHessianEntriesTo(hessianEntries, x);
+		hessianSparse.setFromTriplets(hessianEntries.begin(), hessianEntries.end());
+
+		function->addGradientTo(grad, x);
+		grad = -1 * grad;
+		rs = grad.sparseView();
+		solver.compute(hessianSparse);
+		solved = solver.solve(rs);
+
+		dx = MatrixXd(solved);
+
 	}
 
 public:

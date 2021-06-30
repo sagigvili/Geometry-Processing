@@ -43,7 +43,9 @@ public:
 		// Vector X1 = getVertex(0, X);
 		// The spring stiffness is stored in the variable `k`.
 
-		return 0;
+		double epsilon_pow2_L = ExtractPos(x, X);
+
+		return 0.5 * k * epsilon_pow2_L;
 	}
 
 	// Adds the gradient to `grad` given deformed `x` and undeformed `X` state
@@ -63,6 +65,22 @@ public:
 		// int globalIndex0 = getNodeIndex(0);
 		// or for node 1
 		// int globalIndex1 = getNodeIndex(1);
+		//
+
+		Vector2d xPos0 = getNodePos(0, x), XPos0 = getNodePos(0, X), xPos1 = getNodePos(1, x), XPos1 = getNodePos(1, X);
+		double l = (xPos1 - xPos0).norm(), L = (XPos1 - XPos0).norm();
+		double eps = l / L - 1;
+
+		Vector2d f0 = -k * eps * (xPos1 - xPos0) / l;
+		Vector2d f1 = -f0;
+
+		int i0 = getNodeIndex(0);
+		int i1 = getNodeIndex(1);
+
+		grad(i0 * 2) += f0(0);
+		grad(i0 * 2 + 1) += f0(1);
+		grad(i1 * 2) += f1(0);
+		grad(i1 * 2 + 1) += f1(1);
 	}
 
 	// Adds the hessian entries to `hesEntries` given deformed `x` and undeformed `X` state
@@ -71,6 +89,41 @@ public:
 		// Ex 1.4
 		// Task: Given `x` and `X`, add the hessian of the spring energy to `hesEntries`.
 
+		Vector2d xPos0 = getNodePos(0, x), XPos0 = getNodePos(0, X), xPos1 = getNodePos(1, x), XPos1 = getNodePos(1, X);
+		double l = (xPos1 - xPos0).norm(), L = (XPos1 - XPos0).norm();
+		double eps = l / L - 1;
+
+		Vector2d u = xPos1 - xPos0;
+
+		MatrixXd H;
+		MatrixXd H_P1 = (u * u.transpose()) / (u.transpose() * u);
+		MatrixXd H_P2 = (MatrixXd::Identity(2, 2) - (u * u.transpose()) / (u.transpose() * u));
+		H.resize(2, 2);
+
+		int i0 = getNodeIndex(0);
+		int i1 = getNodeIndex(1);
+
+		H = -k * (1 / L * H_P1 + eps / l * H_P2);
+
+		hesEntries.push_back(Tripletd(i0 * 2, i0 * 2, -H(0, 0))), hesEntries.push_back(Tripletd(i0 * 2, i0 * 2 + 1, -H(0, 1))),
+		hesEntries.push_back(Tripletd(i0 * 2 + 1, i0 * 2, -H(1, 0))), hesEntries.push_back(Tripletd(i0 * 2 + 1, i0 * 2 + 1, -H(1, 1)));
+
+		hesEntries.push_back(Tripletd(i0 * 2, i1 * 2, H(0, 0))), hesEntries.push_back(Tripletd(i0 * 2, i1 * 2 + 1, H(0, 1))),
+		hesEntries.push_back(Tripletd(i0 * 2 + 1, i1 * 2, H(1, 0))), hesEntries.push_back(Tripletd(i0 * 2 + 1, i1 * 2 + 1, H(1, 1)));
+
+		hesEntries.push_back(Tripletd(i1 * 2, i0 * 2, H(0, 0))), hesEntries.push_back(Tripletd(i1 * 2, i0 * 2 + 1, H(0, 1))),
+		hesEntries.push_back(Tripletd(i1 * 2 + 1, i0 * 2, H(1, 0))), hesEntries.push_back(Tripletd(i1 * 2 + 1, i0 * 2 + 1, H(1, 1)));
+
+		hesEntries.push_back(Tripletd(i1 * 2, i1 * 2, -H(0, 0))), hesEntries.push_back(Tripletd(i1 * 2, i1 * 2 + 1, -H(0, 1))),
+		hesEntries.push_back(Tripletd(i1 * 2 + 1, i1 * 2, -H(1, 0))), hesEntries.push_back(Tripletd(i1 * 2 + 1, i1 * 2 + 1, -H(1, 1)));
+
+	}
+
+	virtual double ExtractPos(const VectorXd& x, const VectorXd& X) {
+		Vector2d xPos0 = getNodePos(0, x), XPos0 = getNodePos(0, X), xPos1 = getNodePos(1, x), XPos1 = getNodePos(1, X);
+		double l = (xPos1 - xPos0).norm(), L = (XPos1 - XPos0).norm();
+		double eps = l / L - 1;
+		return pow(eps, 2) * L;
 	}
 
 protected:

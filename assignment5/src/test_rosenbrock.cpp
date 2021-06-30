@@ -23,7 +23,7 @@ int main(int argc, char *argv[]) {
 	}
 
 	// Ex 1.3: Newton's method
-#if 0 // set to 1 for Ex 1.3
+#if 1 // set to 1 for Ex 1.3
 	{
 		NewtonFunctionMinimizer minimizer;
 
